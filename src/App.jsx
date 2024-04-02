@@ -7,7 +7,8 @@ import './App.css';
 function App() {
   const [featPupId, setFeatPupId] = useState(null);
   const [puppies, setPuppies] = useState(puppyList);
-  console.log(puppies);
+  const featuredPup = puppies.find((pup) => pup.id === featPupId);
+  console.log(featuredPup);
 
   return (
     <>
@@ -15,7 +16,21 @@ function App() {
         {puppies.map((puppy) => (
           <p onClick={() => setFeatPupId(puppy.id)} key={puppy.id}>{puppy.name}</p>
         ))}
-        {featPupId && <p>{featPupId}</p>}
+        {featPupId && <div>
+  {puppies.map((puppy) => (
+    <p onClick={() => setFeatPupId(puppy.id)} key={puppy.id}>{puppy.name}</p>
+  ))}
+  {featPupId && (
+    <div>
+      <h2>{featuredPup.name}</h2>
+      <ul>
+        <li>Age: {featuredPup.age}</li>
+        <li>Email: {featuredPup.email}</li>
+        {/* Add other properties as needed */}
+      </ul>
+    </div>
+  )}
+</div>}
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
