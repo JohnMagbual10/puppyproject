@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # puppyproject
 Vite-puppy-project
 >>>>>>> d83428b48cfe42cb42ccee9b31ddd62f1ee4edcf
+>>>>>>> Deployed Application URL: https://app.netlify.com/sites/rainbow-phoenix-c15278/overview
