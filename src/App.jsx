@@ -11,7 +11,10 @@ function App() {
 
   return (
     <>
-      <div>
+      <div> { puppies.map((puppy) => {
+    return <p key={puppy.id}>{puppy.name}</p>;
+  })
+  }
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
